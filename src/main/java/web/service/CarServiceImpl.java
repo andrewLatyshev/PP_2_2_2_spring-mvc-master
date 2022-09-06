@@ -1,6 +1,7 @@
 package web.service;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 import web.models.Car;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 
 @Service
 public class CarServiceImpl implements CarService {
-    private List<Car> carList;
+    private List<Car> carList = new ArrayList<>();
     {
         carList.add(new Car(2001L, "Honda", "Civic"));
         carList.add(new Car(2004L, "Subaru", "Legacy"));
